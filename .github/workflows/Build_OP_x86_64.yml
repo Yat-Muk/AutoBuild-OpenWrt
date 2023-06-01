@@ -69,7 +69,19 @@ jobs:
       working-directory: ./openwrt
       run: |
         git clone https://github.com/kenzok8/openwrt-packages.git openwrt-packages/luci-app-openclash
+    #    git clone "your_github_link" package/"your_folder_name"   
+    
+    - name: Import external feeds - store
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/kenzok8/openwrt-packages.git openwrt-packages/luci-app-store
     #    git clone "your_github_link" package/"your_folder_name"    
+    
+    - name: Import external feeds - passwall2
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/kenzok8/small-package.git small-package/luci-app-passwall2
+    #    git clone "your_github_link" package/"your_folder_name"
     
     #- name: Import external feeds - passwall
     #  working-directory: ./openwrt
